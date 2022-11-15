@@ -21,5 +21,61 @@ function App() {
     </div>
   );
 }
+/*
+
+
+
+
+ */
+const questionTypes = {
+  "LVLT": {
+    instruction: "Listen to the audio once by clicking the button, "
+      + "and select the most appropriate answer."
+  },
+  "VLT": {
+    instruction: "Please read the text below and select the most appropriate answer."
+  },
+}
+
+const questionList = [
+  {
+    type: questionTypes.LVLT,
+    audioSrc: "audio/x.mp3",
+    options: ["", "", "", ""],
+    answer: "",
+  },
+  {
+    type: questionTypes.VLT,
+    readingText: "",
+    options: ["", "", "", ""],
+    answer: "",
+  },
+]
+
+/**
+ * @param questionProp {{
+ *    type: {
+ *      instruction: string,
+ *    }, 
+ *    audioSrc: string, 
+ *    options: Array<string>, 
+ *    answer: string,
+ * }}
+ * 
+ * @return JSX.Element
+ */
+function Question(questionProp) {
+  return (
+    <div>
+      <div>Q1.</div>
+      <p>
+        
+      </p>
+      <audio src=""/>
+      
+      
+    </div>
+  )
+}
 
 export default App;
